@@ -1,4 +1,4 @@
 package com.users.app.repository;
 
-public class UsersRepository {
+public interface UsersRepository {
 }
