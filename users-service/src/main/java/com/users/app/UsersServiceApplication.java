@@ -1,13 +1,15 @@
-package com.users.app;
+package com.customer.app.customer_service.service;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.customer.app.customer_service.client.dto.*;
 
-@SpringBootApplication
-public class UsersServiceApplication {
+public interface UsersService {
+	UsersResponse save(UsersRequest request);
+	UsersResponse getUserById(int id);
+	UsersResponse getUserByPhone(String phone);
+	UsersResponse updateUser (int id, UsersRequest request);
+	RegisterResponse register(RegisterRequest request);
 
-	public static void main(String[] args) {
-		SpringApplication.run(UsersServiceApplication.class, args);
-	}
+	Boolean checkToken(String token);
 
 }
+
